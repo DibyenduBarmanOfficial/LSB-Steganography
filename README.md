@@ -17,9 +17,30 @@ Steganography is the practice of hiding private or sensitive information within 
 
 • This has to be an command line application and all the options has to be passed as an command line argument
 
-**Compilation Process**
+# Compilation & Run the Project
 
 Before going to compilation we have to know some essential points. In this project using files are beautiful.bmp, common.h, decode.c, encode.c, encode.h, main_test_encode_decode.c, secret.txt, types.h, '.bmp' is the image file, '.txt' is the text file which is contained a secret message, '.h' are the header file and '.c'  are the source file. Header files are used for function and variable declarations and Source files are used for function and variable definitions. Here we are using multiple files for the project so, we are compiling all C files at a time. For this reason, only all necessary files have to keep in the same directory.
 
-gcc *.c
+For compile -> gcc  *.c
 
+For Encrypting Step1-> ./a.out -e beautiful.bmp secret.txt
+
+The above encoding process will generate an additional image file in the same project directory namely "stego_img.bmp" which is the default output filename. We can provide our own output filename by giving the 4th argument as shown below: (Note that, this filename must be having ".bmp" format, otherwise an error message will be shown)
+
+For Encrypting Step2-> ./a.out -e beautiful.bmp secret.txt my_stegged_img.bmp
+
+If we want to provide more security, we can use a passcode for encrypting operations using -p followed by the passcode.
+
+For Encrypting Step3-> ./a.out -e beautiful.bmp secret.txt my_stegged_img.bmp -p 1234
+
+*Note: the passcode can contain a maximum of 4 "digits". You cannot use a passcode like 1*3p
+
+For Decrypting Step1-> ./a.out -d stego_img.bmp
+
+It will decrypt the secret message from the image and store it in a newly created file called "decoded.txt" which is the default decoded filename. This file has the same format as that of the input secret file format.
+
+For Decrypting Step2-> ./a.out -d stego_img.bmp my_decoded_file.txt
+
+If we want to provide our own decoded filename, then we can do so by using 3rd argument as shown above.
+
+*Note: the file format must match with the input secret file format. Otherwise, an error message will show.
