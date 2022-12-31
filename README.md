@@ -33,7 +33,7 @@ If we want to provide more security, we can use a passcode for encrypting operat
 
 For Encrypting Step3-> ./a.out -e beautiful.bmp secret.txt my_stegged_img.bmp -p 1234
 
-*Note: the passcode can contain a maximum of 4 "digits". You cannot use a passcode like 1*3p
+*Note: The passcode can contain a maximum of 4 "digits". We can't use a passcode like 1*3p
 
 For Decrypting Step1-> ./a.out -d stego_img.bmp
 
@@ -43,4 +43,4 @@ For Decrypting Step2-> ./a.out -d stego_img.bmp my_decoded_file.txt
 
 If we want to provide our own decoded filename, then we can do so by using 3rd argument as shown above.
 
-*Note: the file format must match with the input secret file format. Otherwise, an error message will show.
+*Note: The file format must match with the input secret file format. Otherwise, an error message will show.
