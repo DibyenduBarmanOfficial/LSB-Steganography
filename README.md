@@ -44,3 +44,9 @@ It will decrypt the secret message from the image and store it in a newly create
 If we want to provide our own decoded filename, then we can do so by using 3rd argument as shown above.
 
 *Note: The file format must match with the input secret file format. Otherwise, an error message will show.
+
+**For Decrypting Step3->** ./a.out -d stego_img.bmp my_decoded_file.txt -p 1234
+
+If a passcode is used while encrypting, then we have to provide the correct passcode as shown above.
+
+After successfully decrypting the process we can check the decoded text file content. Here the secret file complete messages will be available inside the decoded text file.
