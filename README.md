@@ -33,7 +33,7 @@ If we want to provide more security, we can use a passcode for encrypting operat
 
 For Encrypting Step3-> ./a.out -e beautiful.bmp secret.txt my_stegged_img.bmp -p 1234
 
-*Note: The passcode can contain a maximum of 4 "digits". We can't use a passcode like 1*3p
+*Note: The passcode can contain a maximum of 4 "digits". We can't use a passcode like 1$3p
 
 For Decrypting Step1-> ./a.out -d stego_img.bmp
 
