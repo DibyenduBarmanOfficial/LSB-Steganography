@@ -16,3 +16,10 @@ Steganography is the practice of hiding private or sensitive information within 
 • The application should provide a option to decrypt the file 
 
 • This has to be an command line application and all the options has to be passed as an command line argument
+
+**Compilation Process**
+
+Before going to compilation we have to know some essential points. In this project using files are beautiful.bmp, common.h, decode.c, encode.c, encode.h, main_test_encode_decode.c, secret.txt, types.h, '.bmp' is the image file, '.txt' is the text file which is contained a secret message, '.h' are the header file and '.c'  are the source file. Header files are used for function and variable declarations and Source files are used for function and variable definitions. Here we are using multiple files for the project so, we are compiling all C files at a time. For this reason, only all necessary files have to keep in the same directory.
+
+gcc *.c
+
